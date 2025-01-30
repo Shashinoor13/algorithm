@@ -1,3 +1,8 @@
+---
+title: Activity Selection Problem
+layout: default
+---
+
 # Activity Selection Problem
 
 This repository contains the implementation and analysis of the Activity Selection problem using both Greedy and Brute Force approaches.

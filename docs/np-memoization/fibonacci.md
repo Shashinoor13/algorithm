@@ -1,3 +1,8 @@
+---
+title: Fibonacci Sequence with Memoization
+layout: default
+---
+
 # Fibonacci Sequence with Memoization
 
 This repository explores different implementations of the Fibonacci sequence, including normal recursion, memoization, and tabulation.

@@ -1,3 +1,8 @@
+---
+title: Sorting Algorithm Comparision
+layout: default
+---
+
 # Sorting Algorithm Comparison
 
 This repository compares the performance of various sorting algorithms, including QuickSort, HeapSort, MergeSort, SelectionSort, and InsertionSort.

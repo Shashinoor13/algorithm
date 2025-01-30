@@ -1,3 +1,9 @@
+---
+title: Primality Testing
+layout: default
+---
+
+
 # Primality Testing
 
 This repository implements two probabilistic primality tests: Fermat's test and the Miller-Rabin test.

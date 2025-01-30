@@ -1,3 +1,8 @@
+---
+title: Parallel QuickSort
+layout: default
+---
+
 # Parallel QuickSort
 
 This repository implements and compares the performance of sequential and parallel versions of the QuickSort algorithm.
