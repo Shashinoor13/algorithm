@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algorithm Documentation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.0.2/marked.min.js"></script>
     <style>
         .markdown-body {
             box-sizing: border-box;
@@ -47,27 +48,29 @@
     <div class="sidebar">
         <h2>Contents</h2>
         <nav>
-            <a href="#activity-selection" class="nav-link">Activity Selection</a>
-            <a href="#np-memoization" class="nav-link">NP Memoization</a>
-            <ul>
-                <li><a href="#fibonacci" class="nav-link">Fibonacci</a></li>
-                <li><a href="#parallel-quicksort" class="nav-link">Parallel Quicksort</a></li>
-                <li><a href="#primality-test" class="nav-link">Primality Test</a></li>
-                <li><a href="#travelling-salesman" class="nav-link">Travelling Salesman</a></li>
-            </ul>
-            <a href="#sorting-algorithms" class="nav-link">Sorting Algorithms</a>
-            <ul>
-                <li><a href="#heap-sort" class="nav-link">Heap Sort</a></li>
-                <li><a href="#insertion-sort" class="nav-link">Insertion Sort</a></li>
-                <li><a href="#merge-sort" class="nav-link">Merge Sort</a></li>
-                <li><a href="#quick-sort" class="nav-link">Quick Sort</a></li>
-                <li><a href="#selection-sort" class="nav-link">Selection Sort</a></li>
-            </ul>
+            <a href="#" onclick="loadMarkdown('docs/activity-selection/index.md')" class="nav-link">Activity Selection</a>
+            <a href="#" onclick="loadMarkdown('docs/np-memoization/fibonacci.md')" class="nav-link">Fibonacci</a>
+            <a href="#" onclick="loadMarkdown('docs/np-memoization/parallel_quick_sort.md')" class="nav-link">Parallel Quicksort</a>
+            <a href="#" onclick="loadMarkdown('docs/np-memoization/primality_test.md')" class="nav-link">Primality Test</a>
+            <a href="#" onclick="loadMarkdown('docs/np-memoization/travelling_salesman.md')" class="nav-link">Travelling Salesman</a>
+            <a href="#" onclick="loadMarkdown('docs/sorting-algorithms/index.md')" class="nav-link">Sorting Algorithms</a>
         </nav>
     </div>
+
     <div class="content markdown-body">
         <h1>Algorithm Documentation</h1>
-        <!-- Content will be populated from markdown files -->
+        <div id="markdown-content">Click a topic to load content.</div>
     </div>
+
+    <script>
+        function loadMarkdown(file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(text => {
+                    document.getElementById('markdown-content').innerHTML = marked.parse(text);
+                })
+                .catch(error => console.error('Error loading markdown:', error));
+        }
+    </script>
 </body>
 </html>
