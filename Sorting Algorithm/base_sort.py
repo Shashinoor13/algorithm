@@ -19,9 +19,9 @@ class BaseSorter:
             for _ in tqdm(range(10), desc=f"Trials for size {size}", leave=False):
                 arr = self.generate_random_array(size)
                 start_time = time.time()
-                self.sort(arr.copy())  # Use copy to ensure fresh array each time
+                self.sort(arr.copy())
                 end_time = time.time()
-                self.times[size].append((end_time - start_time) * 1000)  # Convert to milliseconds
+                self.times[size].append((end_time - start_time) * 1000)
     
     def get_average_times(self):
         return {size: sum(times)/len(times) for size, times in self.times.items()}
